@@ -14,6 +14,6 @@ setup(
         "fastapi",
         "uvicorn"
     ],
-    author="Your Name",
+    author="Muktananda Hiremath",
     description="A machine learning project for crop prediction using NPK, temperature, and pH",
 )
