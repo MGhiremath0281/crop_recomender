@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+crop_prediction.egg-info/PKG-INFO
+crop_prediction.egg-info/SOURCES.txt
+crop_prediction.egg-info/dependency_links.txt
+crop_prediction.egg-info/requires.txt
+crop_prediction.egg-info/top_level.txt

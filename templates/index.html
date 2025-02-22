@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation System</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            font-size: 16px;
+            color: #FF9900;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input[type='number'] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            background-color: #fff;
+        }
+        .form-group input[type='number']:focus {
+            outline: none;
+            border-color: #FF9900;
+        }
+        button.btn {
+            width: 100%;
+            height: 40px;
+            color: white;
+            background-color: black;
+            border: 2px solid black;
+            font-size: x-large;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button.btn:hover {
+            background-color: #333333;
+        }
+        .prediction {
+            text-align: center;
+            font-size: x-large;
+            margin-top: 20px;
+            color: black;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Crop Recommendation System</h1>
+
+    <form method="POST" action="/predict">
+        <div class="form-group">
+            <label for="N">Nitrogen (N)</label>
+            <input type="number" step="any" id="N" name="N" required />
+        </div>
+
+        <div class="form-group">
+            <label for="P">Phosphorus (P)</label>
+            <input type="number" step="any" id="P" name="P" required />
+        </div>
+
+        <div class="form-group">
+            <label for="K">Potassium (K)</label>
+            <input type="number" step="any" id="K" name="K" required />
+        </div>  
+
+        <div class="form-group">
+            <label for="temperature">Temperature (&#8451;)</label>
+            <input type="number" step="any" id="temperature" name="temperature" required />  
+        </div>  
+
+        <div class="form-group">
+            <label for="humidity">Humidity (%)</label>  
+            <input type="number" step="any" id="humidity" name="humidity" required />  
+        </div>  
+
+        <div class="form-group">
+            <label for="ph">pH</label>  
+            <input type="number" step="any" id="ph" name="ph" required />   
+        </div>  
+
+        <div class="form-group">
+            <label for="rainfall">Rainfall (mm)</label>
+            <input type="number" step="any" id="rainfall" name="rainfall" required />
+        </div>
+
+        <button class="btn" type="submit">Get Crop Recommendation</button>
+    </form>
+
+    {% if prediction_text %}
+    <div class="prediction">
+        <p>{{ prediction_text }}</p>
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+2025-02-22 23:10:53,344 - INFO - Loading dataset...
+2025-02-22 23:10:53,363 - INFO - Dataset loaded successfully.
+2025-02-22 23:10:53,377 - INFO - Training started for all models.
+2025-02-22 23:10:53,377 - INFO - Training Logistic Regression...
+2025-02-22 23:10:53,723 - INFO - Logistic Regression Accuracy: 0.9727
+2025-02-22 23:10:53,751 - INFO - Training Decision Tree...
+2025-02-22 23:10:53,788 - INFO - Decision Tree Accuracy: 0.9841
+2025-02-22 23:10:53,820 - INFO - Training Random Forest...
+2025-02-22 23:10:54,469 - INFO - Random Forest Accuracy: 0.9932
+2025-02-22 23:10:54,491 - INFO - Training SVM...
+2025-02-22 23:10:54,950 - INFO - SVM Accuracy: 0.9841
+2025-02-22 23:10:54,971 - INFO - Training Naive Bayes...
+2025-02-22 23:10:54,996 - INFO - Naive Bayes Accuracy: 0.9955
+2025-02-22 23:10:55,019 - INFO - Training K-Nearest Neighbors...
+2025-02-22 23:10:55,155 - INFO - K-Nearest Neighbors Accuracy: 0.9795
+2025-02-22 23:10:55,182 - INFO - Training Gradient Boosting...
+2025-02-22 23:11:13,926 - INFO - Gradient Boosting Accuracy: 0.9886
+2025-02-22 23:11:13,955 - INFO - Best model (Naive Bayes) saved with accuracy: 0.9955
+2025-02-22 23:11:13,955 - INFO - Model training completed successfully.
+2025-02-22 23:12:39,642 - INFO - Model loaded successfully.
+2025-02-22 23:30:37,137 - INFO - Loading dataset...
+2025-02-22 23:30:37,163 - INFO - Dataset loaded successfully.
+2025-02-22 23:30:37,172 - INFO - LabelEncoder saved successfully. Classes: ['apple' 'banana' 'blackgram' 'chickpea' 'coconut' 'coffee' 'cotton'
+ 'grapes' 'jute' 'kidneybeans' 'lentil' 'maize' 'mango' 'mothbeans'
+ 'mungbean' 'muskmelon' 'orange' 'papaya' 'pigeonpeas' 'pomegranate'
+ 'rice' 'watermelon']
+2025-02-22 23:30:37,182 - INFO - Training started for all models.
+2025-02-22 23:30:37,183 - INFO - Training Logistic Regression...
+2025-02-22 23:30:37,359 - INFO - Logistic Regression Accuracy: 0.9727
+2025-02-22 23:30:37,377 - INFO - Training Decision Tree...
+2025-02-22 23:30:37,429 - INFO - Decision Tree Accuracy: 0.9795
+2025-02-22 23:30:37,477 - INFO - Training Random Forest...
+2025-02-22 23:30:38,299 - INFO - Random Forest Accuracy: 0.9909
+2025-02-22 23:30:38,316 - INFO - Training SVM...
+2025-02-22 23:30:38,799 - INFO - SVM Accuracy: 0.9841
+2025-02-22 23:30:38,817 - INFO - Training Naive Bayes...
+2025-02-22 23:30:38,835 - INFO - Naive Bayes Accuracy: 0.9955
+2025-02-22 23:30:38,854 - INFO - Training K-Nearest Neighbors...
+2025-02-22 23:30:38,939 - INFO - K-Nearest Neighbors Accuracy: 0.9795
+2025-02-22 23:30:38,965 - INFO - Training Gradient Boosting...
+2025-02-22 23:30:57,393 - INFO - Gradient Boosting Accuracy: 0.9886
+2025-02-22 23:30:57,412 - INFO - Best model (Naive Bayes) saved with accuracy: 0.9955
+2025-02-22 23:30:57,413 - INFO - Model training completed successfully.
+2025-02-22 23:31:06,265 - INFO - Model loaded successfully.
+2025-02-22 23:31:06,266 - INFO - LabelEncoder loaded successfully.
+2025-02-22 23:32:39,199 - INFO - Model loaded successfully.
+2025-02-22 23:32:39,199 - INFO - LabelEncoder loaded successfully.
+2025-02-22 23:33:43,370 - INFO - Model loaded successfully.
+2025-02-22 23:33:43,371 - INFO - LabelEncoder loaded successfully.
+2025-02-22 23:33:45,921 - INFO - Model loaded successfully.
+2025-02-22 23:33:45,921 - INFO - LabelEncoder loaded successfully.
+2025-02-22 23:34:56,891 - INFO - Prediction made successfully: rice
+2025-02-22 23:38:33,484 - INFO - Model loaded successfully.
+2025-02-22 23:38:33,485 - INFO - LabelEncoder loaded successfully.
+2025-02-22 23:38:38,308 - INFO - Model loaded successfully.
+2025-02-22 23:38:38,310 - INFO - LabelEncoder loaded successfully.
+2025-02-22 23:39:06,191 - INFO - Prediction made successfully: jute

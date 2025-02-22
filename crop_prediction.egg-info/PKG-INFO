@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: crop-prediction
+Version: 0.1
+Summary: A machine learning project for crop prediction using NPK, temperature, and pH
+Author: Your Name
+License-File: LICENSE
