@@ -55,3 +55,17 @@
 2025-02-22 23:38:38,308 - INFO - Model loaded successfully.
 2025-02-22 23:38:38,310 - INFO - LabelEncoder loaded successfully.
 2025-02-22 23:39:06,191 - INFO - Prediction made successfully: jute
+2025-03-06 21:32:06,603 - INFO - Model loaded successfully.
+2025-03-06 21:32:06,604 - INFO - LabelEncoder loaded successfully.
+2025-03-06 21:32:10,075 - INFO - Model loaded successfully.
+2025-03-06 21:32:10,075 - INFO - LabelEncoder loaded successfully.
+2025-03-06 21:32:51,187 - INFO - Prediction made successfully: pigeonpeas
+2025-03-06 21:37:02,830 - INFO - Model loaded successfully.
+2025-03-06 21:37:02,832 - INFO - LabelEncoder loaded successfully.
+2025-03-06 21:37:09,801 - INFO - Model loaded successfully.
+2025-03-06 21:37:09,808 - INFO - LabelEncoder loaded successfully.
+2025-03-06 21:46:54,864 - INFO - Model loaded successfully.
+2025-03-06 21:46:54,866 - INFO - LabelEncoder loaded successfully.
+2025-03-06 21:46:57,165 - INFO - Model loaded successfully.
+2025-03-06 21:46:57,166 - INFO - LabelEncoder loaded successfully.
+2025-03-06 21:47:38,287 - INFO - Prediction made successfully: pigeonpeas

@@ -4,129 +4,169 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crop Recommendation System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f2f2f2;
+            background-color: #e0e0e0;
             margin: 0;
             padding: 0;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(90deg, #283048, #859398);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .nav-bar {
+            background: #283048;
+            padding: 10px;
+            text-align: center;
+        }
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .nav-bar a:hover {
+            color: #66bfbf;
         }
         .container {
-            max-width: 600px;
-            margin: 50px auto;
+            max-width: 900px;
+            margin: 40px auto;
             padding: 30px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        h1 {
+        h2 {
             text-align: center;
-            font-size: 28px;
-            color: #000000;
-            margin-bottom: 20px;
+            color: #283048;
         }
         .form-group {
             margin-bottom: 15px;
         }
         .form-group label {
             font-size: 16px;
-            color: #FF9900;
             font-weight: bold;
             display: block;
             margin-bottom: 5px;
+            color: #283048;
         }
         .form-group input[type='number'] {
             width: 100%;
-            padding: 12px;
-            border-radius: 6px;
+            padding: 10px;
+            border-radius: 5px;
             border: 1px solid #ccc;
             font-size: 16px;
-            background-color: #fff;
+            background: #f9f9f9;
         }
         .form-group input[type='number']:focus {
+            border-color: #283048;
             outline: none;
-            border-color: #FF9900;
         }
         button.btn {
             width: 100%;
-            height: 40px;
+            padding: 12px;
             color: white;
-            background-color: black;
-            border: 2px solid black;
-            font-size: x-large;
+            background: #283048;
+            border: none;
+            font-size: 18px;
             font-weight: bold;
-            text-align: center;
             border-radius: 5px;
             cursor: pointer;
+            transition: 0.3s;
         }
         button.btn:hover {
-            background-color: #333333;
+            background: #859398;
         }
         .prediction {
             text-align: center;
-            font-size: x-large;
+            font-size: 18px;
             margin-top: 20px;
-            color: black;
+            color: #283048;
             font-weight: bold;
+        }
+        .about {
+            margin-top: 40px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+            background: #283048;
+            color: white;
+            padding: 10px;
+            text-align: center;
         }
         @media (max-width: 768px) {
             .container {
+                width: 90%;
                 padding: 20px;
-                width: auto;
+            }
+            .nav-bar a {
+                display: block;
+                margin: 10px 0;
             }
         }
     </style>
 </head>
 <body>
-
-<div class="container">
-    <h1>Crop Recommendation System</h1>
-
-    <form method="POST" action="/predict">
-        <div class="form-group">
-            <label for="N">Nitrogen (N)</label>
-            <input type="number" step="any" id="N" name="N" required />
-        </div>
-
-        <div class="form-group">
-            <label for="P">Phosphorus (P)</label>
-            <input type="number" step="any" id="P" name="P" required />
-        </div>
-
-        <div class="form-group">
-            <label for="K">Potassium (K)</label>
-            <input type="number" step="any" id="K" name="K" required />
-        </div>  
-
-        <div class="form-group">
-            <label for="temperature">Temperature (&#8451;)</label>
-            <input type="number" step="any" id="temperature" name="temperature" required />  
-        </div>  
-
-        <div class="form-group">
-            <label for="humidity">Humidity (%)</label>  
-            <input type="number" step="any" id="humidity" name="humidity" required />  
-        </div>  
-
-        <div class="form-group">
-            <label for="ph">pH</label>  
-            <input type="number" step="any" id="ph" name="ph" required />   
-        </div>  
-
-        <div class="form-group">
-            <label for="rainfall">Rainfall (mm)</label>
-            <input type="number" step="any" id="rainfall" name="rainfall" required />
-        </div>
-
-        <button class="btn" type="submit">Get Crop Recommendation</button>
-    </form>
-
-    {% if prediction_text %}
-    <div class="prediction">
-        <p>{{ prediction_text }}</p>
+    <div class="header">
+        <h1>Crop Recommendation System</h1>
+        <p>Expert advice for optimal crop selection</p>
     </div>
-    {% endif %}
-</div>
-
+    <div class="nav-bar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="container" id="home">
+        <h2>Crop Recommendation Form</h2>
+        <form method="POST" action="/predict">
+            <div class="form-group">
+                <label for="N">Nitrogen (N)</label>
+                <input type="number" id="N" name="N" required />
+            </div>
+            <div class="form-group">
+                <label for="P">Phosphorus (P)</label>
+                <input type="number" id="P" name="P" required />
+            </div>
+            <div class="form-group">
+                <label for="K">Potassium (K)</label>
+                <input type="number" id="K" name="K" required />
+            </div>
+            <div class="form-group">
+                <label for="temperature">Temperature (°C)</label>
+                <input type="number" id="temperature" name="temperature" required />
+            </div>
+            <div class="form-group">
+                <label for="humidity">Humidity (%)</label>
+                <input type="number" id="humidity" name="humidity" required />
+            </div>
+            <div class="form-group">
+                <label for="ph">pH</label>
+                <input type="number" id="ph" name="ph" required />
+            </div>
+            <div class="form-group">
+                <label for="rainfall">Rainfall (mm)</label>
+                <input type="number" id="rainfall" name="rainfall" required />
+            </div>
+            <button class="btn" type="submit">Get Crop Recommendation</button>
+        </form>
+        {% if prediction_text %}
+        <div class="prediction">
+            <p>{{ prediction_text }}</p>
+        </div>
+        {% endif %}
+    </div>
+    <div class="about" id="about">
+    <div class="footer">
+        <p>&copy; 2025 Crop Recommendation System. All rights reserved.</p>
+    </div>
 </body>
 </html>
